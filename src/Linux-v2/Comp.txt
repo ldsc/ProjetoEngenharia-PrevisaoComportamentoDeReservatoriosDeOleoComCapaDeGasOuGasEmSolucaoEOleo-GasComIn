@@ -1,0 +1,1 @@
+g++ ap.cpp alglibinternal.cpp CGnuplot.cpp specialfunctions.cpp stdafx.h CDataProd.cpp CLaplaceWd.cpp CRocha.cpp CAquifero.cpp CReservatorio.cpp CFetkovich.cpp CFluido.cpp COleo.cpp CGas.cpp CSimuladorCGGS.cpp CMuskat.cpp CRK4.cpp CGeometria.h CLinear.cpp CRadial.cpp CStehfest.cpp CSimulador.cpp CHurst.cpp CInterface.cpp CInterfaceCGGS.cpp  main.cpp -o simulador

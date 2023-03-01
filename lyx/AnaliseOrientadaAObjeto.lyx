@@ -1,0 +1,1077 @@
+﻿#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Análise Orientada a Objeto}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+AOO
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+AOO
+\end_layout
+
+\end_inset
+
+ – Análise Orientada a Objeto
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Análise orientada a objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:AOO"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+“A terceira etapa do desenvolvimento de um programa é a Análise Orientada
+ a Objeto (AOO).
+ A AOO utiliza algumas regras para identificar os objetos de interesse,
+ as relações entre as classes, os atributos, os métodos, as heranças, as
+ associações e as dependências” (Bueno, 2017).
+ Nesta etapa o primordial não é o programa em si, mas o que será desenvolvido.
+ Aqui, faremos e analisaremos um conjunto de diagramas que permitirá visualizar,
+ de várias formas, o software.
+ A AOO abrange o desenvolvimento dos modelos estrutural e dinâmico.
+ 
+\end_layout
+
+\begin_layout Section
+Diagramas de classes
+\end_layout
+
+\begin_layout Standard
+O diagrama de classes é essencial para a montagem da versão inicial do código
+ do software.
+ Este diagrama é constituído pelas classes, seus métodos e atributos, além
+ das diversas relações entre as classes.
+ O diagrama de classes deste software é apresentado nas figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-classes"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-classes1-1"
+
+\end_inset
+
+.
+ Note que o diagrama vem dividido em duas partes: a primeira diz respeito
+ ao simulador de óleo com capa de gás ou gás em solução; enquanto a segunda
+ diz respeito ao simulador de óleo/gás com influxo de água.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename ../imagens/class diagram_1.svg
+	lyxscale 50
+	scale 50
+	clip
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de classes v2.0- parte 1 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename ../imagens/imgs_teste/class diagram.svg
+	lyxscale 50
+	scale 43
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de classes v1.0- parte 2
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-classes1-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dicionário de classes
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Dicionário-de-classes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+CAquifero: representa uma rocha aqüífero, herda a classe CRocha e possui
+ os atributos específicos do aqüífero, que são permeabilidade, compressibilidade
+ total e viscosidade da água.
+ 
+\end_layout
+
+\begin_layout Itemize
+CDataProd: Classe que contém os dados de produção do reservatório.
+ 
+\end_layout
+
+\begin_layout Itemize
+CFetkovich: herdeira de CSimulador, resolve o problema pelo método de Fetkovich.
+\end_layout
+
+\begin_layout Itemize
+CFluido: representa um fluido e suas propriedades básicas: densidade, volume
+ total e fator volume formação.
+ 
+\end_layout
+
+\begin_layout Itemize
+CGas: representa uma Gás, herdeira da classe CFluido, adiciona as propriedades
+ do Gás como Temperatura e Pressão Pseudocrítica, temperatura do Gás e fator
+ de compressibilidade.
+ Define métodos para calcular este último, utilizando o método de Brill
+ & Beggs ou a aproximação polinomial.
+ Possui um método para calcular o fator volume formação de acordo com a
+ pressão.
+ 
+\end_layout
+
+\begin_layout Itemize
+CGeometria: Classe abstrata que representa a geometria da rocha.
+ Ela é herdada pelas classes CLinear e CRadial.
+ 
+\end_layout
+
+\begin_layout Itemize
+CGnuplot: Classe que fornece os métodos necessários para a geração de gráficos.
+\end_layout
+
+\begin_layout Itemize
+CHurst: herdeira de CSimulador, resolve o problema pelo método de van Everdingen
+ & Hurst.
+ 
+\end_layout
+
+\begin_layout Itemize
+CInterface: Classe que interage com o usuário e que comanda o que será mostrado
+ na tela para reservatórios com influxo de água.
+ Cria um objeto CSimulador com os dados fornecidos pelo usuário e apresenta
+ os resultados.
+ 
+\end_layout
+
+\begin_layout Itemize
+CInterfaceCGGS: Classe que interage com o usuário e que comanda o que será
+ mostrado na tela para reservatórios com capa de gás e gás em solução.
+ Cria um objeto CSimuladorCGGS com os dados fornecidos pelo usuário e apresenta
+ os resultados.
+ A sigla CGGS significa (Capa de Gás e Gás em Solução - CGGS).
+\end_layout
+
+\begin_layout Itemize
+CLaplaceWd: Classe que gera os influxos adimensionais no Campo de La Place
+ para o método de van Everdingen & Hurst.
+ 
+\end_layout
+
+\begin_layout Itemize
+CLinear: Classe herdeira de CGeometria, representa uma geometria linear,
+ com largura e comprimento.
+ 
+\end_layout
+
+\begin_layout Itemize
+CMuskat: Classe herdeira de CSimuladorCGGS, resolve o problema pelo método
+ de Muskat.
+ 
+\end_layout
+
+\begin_layout Itemize
+COleo: Classe que representa um Oleo, herdeira de CFluido, adiciona as proprieda
+des do óleo como a compressibilidade do óleo e a compressibilidade efetiva.
+\end_layout
+
+\begin_layout Itemize
+CRadial: Classe herdeira de CGeometria, representa uma geometria radial,
+ com um raio.
+\end_layout
+
+\begin_layout Itemize
+CReservatorio: representa uma rocha reservatório, herda a classe CRocha
+ e possui os atributos específicos do reservatório, que são vazão e saturação
+ de água.
+ 
+\end_layout
+
+\begin_layout Itemize
+CRocha: Classe que representa uma rocha, possuindo os atributos pressão
+ inicial, porosidade e espessura.média.
+ Possui uma CGeometria que é definida no seu construtor.
+ É herdada pelas classes CReservatório e CAquifero.
+\end_layout
+
+\begin_layout Itemize
+CRungeKutta4: Classe que resolve a EDO do método de Muskat pela aplicação
+ do método numérico de Runge-Kutta de 4ª ordem.
+\end_layout
+
+\begin_layout Itemize
+CSimulador: Classe-mãe com os atributos necessários para a simulação de
+ reservatórios com influxo de água, sendo os métodos SolverGas() e SolverOleo()
+ definidos pelas classes herdeiras CHurst e CFetkovich.
+ Possui os parâmetros de simulação: número de anos, tipo de influxo e passo.
+ Possui objetos CReservatorio, CFluido e CAquifero.
+ 
+\end_layout
+
+\begin_layout Itemize
+CSimuladorCGGS: Classe-mãe com os atributos necessários para a simulação
+ de reservatórios com com capa de gás e gás em solução, sendo o método MetMuskat
+() definido pela classes herdeira CMuskat.
+ Possui os parâmetros de simulação: pressão, derivada do fator volume-formação
+ do óleocom a pressão, razão de solubilidade, permeabilidades relativa ao
+ óleo e ao gás, viscosidades do óleo e gás, o inverso do fator volume-formação
+ do gás, derivada da razão de solubilidade com a pressão, a derivada do
+ inverso do fator volume-formação do gás com a pressão.
+ Possui objetos CReservatorio, CFluido e CDataProd.
+ 
+\end_layout
+
+\begin_layout Itemize
+CStehfest: Classe que realiza a inversão numérica dos influxos adimensionais
+ no Campo de Laplace, provenientes da classe CLaplaceWd.
+\end_layout
+
+\begin_layout Section
+Diagrama de seqüência – eventos
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Eventos
+\end_layout
+
+\end_inset
+
+ e mensagens
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Mensagens
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de sequência
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de sequência"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de seqüências representa, no tempo, a troca de eventos e mensagens
+ entre os objetos do sistema.
+ Ele é parte do modelo dinâmico da análise orientada a objeto.
+\end_layout
+
+\begin_layout Subsection
+
+\shape italic
+\emph on
+Diagrama de sequência geral
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-sequencia"
+
+\end_inset
+
+ mostra o diagrama de sequência versão v1.0 para a resolução de um problema
+ de influxo de água.
+ O usuário cria um objeto CInterface e fornece os dados necessários.
+ Então é criado um objeto CSimulador, que possui agregado os objetos CReservatór
+io, CFluido e CAquifero.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagrama de sequencia.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de seqüência v1.0
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-sequencia"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-sequencia-1"
+
+\end_inset
+
+ mostra o diagrama de sequência versão v2.0 para a resolução de um problema
+ de cálculo de parâmetros de reservatórios com capa de gás e gás em solução.
+ O usuário cria um objeto CInterfaceCGGS, fornece os dados necessários e
+ é criado os objetos agregados CSimuladorCGGS,CMuskat, CDataProd e CRK4.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagseqv2.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de seqüência v2.0
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-sequencia-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de comunicação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+comunicação
+\end_layout
+
+\end_inset
+
+ – colaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Diagrama-de-Comunicação"
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de colaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "par:Diagrama-de-colaboração:"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+“O diagrama de comunicação pode ser desenvolvido como uma extensão do diagrama
+ de caso de uso, detalhando o mesmo por meio da inclusão de objetos, mensagens
+ e parâmetros trocados entre objetos.
+ No diagrama de comunicação, o foco é a interação e a troca de mensagens
+ e dados entre os objetos”.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-comunicação"
+
+\end_inset
+
+ apresenta o diagrama de comunicação da classe CSimulador para a versão
+ v1.0 e a Figura para a versão v2.0.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagrama de Comunicacao.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de comunicação v1.0 : 
+\begin_inset Quotes eld
+\end_inset
+
+Simulação de um influxo de água
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-comunicação"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagcommv2.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de comunicação v2.0: 
+\begin_inset Quotes eld
+\end_inset
+
+Resolução da EDO de Muskat
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-comunicação-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de máquina de estado
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:diagrama de estados"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+“Um diagrama de máquina de estado representa os diversos estados que o objeto
+ assume e os eventos que ocorrem ao longo de sua vida ou mesmo ao longo
+ de um processo (histórico de um objeto)” [3].
+ Estes estados podem ser a realização de uma atividade demorada ou a espera
+ de um evento.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+ apresenta este diagrama para a classe CSimulador que realiza o cenário
+ de teste e a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-maquina-de-estado-1"
+
+\end_inset
+
+apresenta o diagrama para o cenário de teste da versão v2.0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/DiagramaMaquinaEstado.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado v1.0: 
+\begin_inset Quotes eld
+\end_inset
+
+Cenário de teste (CSimulador)
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-maquina-de-estado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagstatev2.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de máquina de estado v2.0: 
+\begin_inset Quotes eld
+\end_inset
+
+Cenário de teste
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-maquina-de-estado-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de atividades
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+O diagrama de atividades correspondente a uma atividade específica do diagrama
+ de máguina de estado
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-atividades"
+
+\end_inset
+
+ apresenta um diagrama de atividades versão 1.0 detalhando um caso específico
+ do diagrama de máquina de estado: 
+\begin_inset Quotes eld
+\end_inset
+
+Processando Simulação - Método Solver()
+\begin_inset Quotes erd
+\end_inset
+
+.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-atividades-1"
+
+\end_inset
+
+ apresenta um diagrama de atividades versão 2.0 detalhando um caso específico
+ do diagrama de máquina de estado: 
+\begin_inset Quotes eld
+\end_inset
+
+Resolvendo a EDO de Muskat
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/atividades.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de atividades v1.0: 
+\begin_inset Quotes eld
+\end_inset
+
+Processando Simulação - Método Solver()
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-atividades"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Diagativv2.png
+	lyxscale 85
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de atividades v2.0: 
+\begin_inset Quotes eld
+\end_inset
+
+Resolvendo a EDO de Muskat
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-atividades-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,29 @@
+1
+2
+	----------
+	Propriedades do Reservatorio
+	----------
+Pressao Inicial (kgf/cm2): 281.3
+Porosidade(fracao): 0.25
+Espessura Media (m): 27.4
+Raio (m): 1391
+Saturacao da Agua (fracao): 0.32
+Vazao (m3 std/d): 4610
+	----------
+	Propriedades do Oleo
+	----------
+Densidade: 1
+Volume inicial (m3 std): 2.3593e+007
+Fator Volume-Formacao (m3/m3 std): 1.2
+Compressibilidade do Oleo (cm2/kgf):213.3e-6
+Compressibilidade Efetiva do Oleo (cm2/kgf):0.0003044
+	----------
+	Propriedades do Aquifero
+	----------
+Pressao Inicial (kgf/cm2): 281.3
+Porosidade(fracao): 0.25
+Espessura Media (m): 27.4
+Raio (m): 16000
+Permeabilidade (md): 150
+Compressibilidade Total (cm2/kgf): 9.1e-005
+Viscosidade da Agua (cp): 0.32

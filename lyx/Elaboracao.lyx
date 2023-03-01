@@ -1,0 +1,1392 @@
+﻿#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esta etapa envolve o estudo dos conceitos relacionados ao software, análise
+ de domínio e a identificação dos pacotes para a análise dos requisitos,
+ ajustando os requisitos iniciais de forma a desenvolver um sistema útil,
+ que atenda às necessidades do usuário e, na medida do possível, permita
+ seu reuso e futura extensão.
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Standard
+Depois de muito estudo e reflexão das especificações do sistema, do material
+ acadêmico e do projeto anterior desse software, foi possível identificar
+ as seguintes áreas abordadas pelo programa:
+\end_layout
+
+\begin_layout Itemize
+Engenharia de Reservatórios: é a espinha dorsal no qual esse projeto se
+ sustenta.
+ O software aqui desenvolvido, utiliza conceitos como o de propriedades
+ dos fluídos (
+\begin_inset Formula $B_{o}$
+\end_inset
+
+,
+\begin_inset Formula $B_{g}$
+\end_inset
+
+,
+\begin_inset Formula $R_{s}$
+\end_inset
+
+,etc.), propriedades de rochas (
+\begin_inset Formula $k_{g}$
+\end_inset
+
+, 
+\begin_inset Formula $k_{o}$
+\end_inset
+
+), a Equação de Balanço (EBM), modelos de Influxo de Água (Fetkovitch e
+ Van Everdingen & Hurst) e mecanismos de produção.
+ O software irá aplicar todos esses conceitos na caracterização adicional
+ do reservatório, fazendo uma predição do comportamento deste ao longo de
+ sua produção.
+\end_layout
+
+\begin_layout Itemize
+Modelagem Numérica Computacional utiliza conceitos matemáticos de Cálculo
+ Numérico.
+ Neste software serão utilizados por exemplo, a Transformada de Laplace,
+ Algoritmo de Stehfest e o Método de Runge-Kutta de 4ª ordem.
+\end_layout
+
+\begin_layout Itemize
+Pacote Gráfico: usar-se-á um pacote gráfico para a geração de gráficos de
+ diferentes parâmetros de reservatórios para que haja uma melhor compreeensão
+ do comportmento desse mesmo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Software: Serão utilizadas classes e bibliotecas já existentes para a utilização
+ dos modelos de influxo de água.
+\end_layout
+
+\begin_layout Section
+Formulação teórica
+\end_layout
+
+\begin_layout Standard
+Nesta seção será discutida a fundamentação teórica do software desenvolvido.
+\end_layout
+
+\begin_layout Subsection
+Mecanismos de produção de reservatórios
+\end_layout
+
+\begin_layout Standard
+Um mecanismo de produção de um reservatório é um conjunto de fatores que
+ leva à produção de hidrocarbonetos.
+ Quando esses mecanismos atuam, eles permitem que o óleo se desloque do
+ poro da rocha para o fundo do poço produtor.
+ Por exemplo, quando o mecanismo de influxo de água atua, a invasão da zona
+ de óleo pela água do aquífero empurra o óleo do poro da rocha em direção
+ ao poço produtor, fazendo que haja produção e ao mesmo tempo sustentando
+ a pressão.
+ Em um reservatório, usualmente há mais de um mecanismo de produção.
+ Pode haver duas situações: (1) um mecanismo é preponderante em relação
+ ao outro; (2) dois ou mais mecanismos exercem igual importância na produção
+ de HC.
+ Na maioria das vezes, temos a situação (1) e então, classificamos os reservatór
+ios de acordo com o mecanismo dominante, tais são: influxo de água (Water
+ Driven), gás em solução (Gas Solution), capa de gás (Gas Expansion), compactaçã
+o de poros (Rock Driven ou Compaction Driven) e segregação gravitacional
+ (Gravity Driven).
+ Quando encontramos a situação (2), damos o nome: mecanismo combinado.
+ 
+\end_layout
+
+\begin_layout Standard
+De acordo com Rosa et al.
+ (2006), os principais mecanismos são: Influxo de Água, Gás em Solução e
+ Capa de Gás.
+ Os dois últimos são exclusivos para reservatórios de óleo enquanto o primeiro
+ serve para ambos gás e óleo.
+ Este software fará a previsão de comportamento desses reservatórios mais
+ importantes.
+\end_layout
+
+\begin_layout Standard
+Os reservatórios que produzem pelo influxo de água, requerem que o reservatório
+ esteja em contato direto com uma grande acumulação de água (pelo menos
+ 10x maior que o reservatório) e que tanto o reservatório quanto o aquífero
+ estejam intimamente ligados, isto é, as alterações nas condições do reservatóri
+o causam alterações no aquífero e vice-versa.
+ O mecanismo se manifesta assim: Com a produção de HC, o reservatório sente
+ uma queda de pressão que é transmitida ao aquífero.
+ Assim, a diminuição da pressão gerará uma diminuição do espaço poroso e
+ expansão da água que acarretará na invasão da água na zona de óleo (influxo
+ de água), invasão essa que manterá a pressão elevada na zona de óleo e
+ deslocará o óleo/gás para a zona produtora.
+ O índice de recuperação por este tipo de mecanismo varia entre 30 e 40%
+ dependendo do reservatório.
+\end_layout
+
+\begin_layout Standard
+Os reservatórios que produzem pela expansão da capa de gás, a capa localizando-s
+e acima da zona de óleo (por ser menos densa) precisa ter um tamanho consideráve
+l (até 10 vezes o tamanho da região de óleo) para que o mecanismo seja atuante.
+ Com a produção de óleo, a pressão decai e com a remoção de fluidos, o gás
+ da capa se expande e vai ocupando os poros que antes tinham óleo.
+ Assim, a pressão é sustentada pela capa.
+ Nesse tipo de mecanismo é necessário um cuidado com a vazão de produção.
+ Se a vazão for muito alta, os efeitos da decompressão não serão sentidos
+ pela capa e ela não atuará, então o período de surgência do reservatório
+ cairá drasticamente.
+ Este mecanismo de produção contém índice de recuperação entre 20 e 30%.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/reservoir.pdf
+	scale 60
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tipos de reservatórios e mecanismos de produção - desenhos esquematizados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os reservatórios que produzem por gás em solução, precisam que não sejam
+ influenciados pelo ambiente externo.
+ Toda a energia para produção se encontra na zona de óleo.
+ Com a produção, a pressão cai até atingir o ponto de bolha, quando esse
+ mecanismo começa a realmente atuar, assim, as frações mais leves de óleo
+ vão vaporizar e esse gás gerado tem mais facilidade de se locomover no
+ meio poroso que o óleo.
+ Portanto, uma porção de HC com gás em solução tem muito mais facilidade
+ de se locomover até o fundo do poço do que uma porção de HC de óleo puro.
+ Porém, esse método só é benéfico para uma faixa de pressão, quando a pressão
+ continua a cair, o que era antes algumas bolhas de gás, agora formarão
+ uma fase contínua de gás para o fundo do poço, fazendo a RGO (Razão Gás-Óleo)
+ explodir.
+ Este método contém índice de recuperação baixo, inferior a 20%.
+ 
+\end_layout
+
+\begin_layout Subsection
+Previsão de comportamento dos reservatórios
+\end_layout
+
+\begin_layout Standard
+A previsão de comportamento dos reservatórios ajudam os engenheiros de reservató
+rio a terem uma melhor ideia de como um determinado reservatório se comporta.
+ Saber como o reservatório se comporta (e comportará) é um estudo necessário
+ para a determinação da viabilidade econômica do reservatório.
+ Esse
+\shape italic
+ ramo da engenharia de reservatórios
+\shape default
+, tem como objetivo estimar parâmetros do reservatório como as 
+\shape italic
+vazões de óleo, gás e água
+\shape default
+, e outros parâmetros secundários como a 
+\shape italic
+saturação de óleo
+\shape default
+,
+\shape italic
+ razão gás-óleo
+\shape default
+,
+\shape italic
+ pressão no contato água-óleo
+\shape default
+, etc.
+ Por exemplo, se a simulação resultar em uma razão gás-óleo alta, indica
+ que a capa de gás chegará à área canhoneada e que precisará de uma intervenção
+ para aquela determinada pressão de reservatório.
+ Em termos operacionais, se já se espera uma intervenção futura, a equipe
+ responsável pelo reservatório poderá se adiantar e planejar como se dará
+ essa intervenção, reduzindo custos.
+ Sem falar também, que a RGO poderá nos dizer o quão viável é explorar aquele
+ reservatório.
+ 
+\end_layout
+
+\begin_layout Standard
+Para os 
+\shape italic
+reservatórios de óleo com capa de gás ou gás em solução
+\shape default
+, é de interesse calcular a 
+\shape italic
+produção acumulada de óleo
+\shape default
+, 
+\shape italic
+produção acumulada de gás
+\shape default
+, 
+\shape italic
+razão gás-óleo e saturação de óleo
+\shape default
+.
+ Já para os 
+\shape italic
+reservatórios com influxo de água
+\shape default
+, é de interesse calcular principalmente o 
+\shape italic
+influxo de água
+\shape default
+ e a 
+\shape italic
+pressão no contato
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Formulação matemática - reservatórios com influxo de água
+\end_layout
+
+\begin_layout Standard
+O 
+\shape italic
+influxo natural de água
+\shape default
+ tanto em reservatórios de óleo como de gás pode ser descrita pela equação
+ de balanço de material do aqüífero, independente do tempo (1.1):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{e}=c_{t}W(p_{i}-p)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde 
+\begin_inset Formula $W_{e}\,[m^{3}]$
+\end_inset
+
+ é o Influxo natural de água,
+\begin_inset Formula $W_{i}\,[m^{3}]$
+\end_inset
+
+ é o volume inicial de água no aqüífero, 
+\begin_inset Formula $p_{i\,}[kgf/cm^{2}]$
+\end_inset
+
+ é a pressão inicial no aqüífero/reservatório, 
+\begin_inset Formula $p\,[kgf/cm^{2}]$
+\end_inset
+
+ é a pressão no contato óleo (ou gás) e água, e 
+\begin_inset Formula $c_{t}\,[cm^{2}/kgf]$
+\end_inset
+
+ é a compressibilidade total do aqüífero.
+\end_layout
+
+\begin_layout Standard
+Porém, esta equação é apenas a definição básica de compressibilidade, e
+ só é aplicável em aqüíferos muito pequenos.
+ Para aqüíferos maiores, um modelo matemático é necessário incluindo a dependênc
+ia do tempo, levando em conta o tempo finito que o aqüífero leva para responder
+ completamente a mudança de pressão no reservatório [5].
+\end_layout
+
+\begin_layout Standard
+Neste trabalho, o cálculo do influxo de água no instante 
+\begin_inset Formula $t_{n}\,[ano]$
+\end_inset
+
+ usando o modelo de van Everdingen & Hurst (1949) (1.2) é:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{en}=U\sum_{j=0}^{n-1}\Delta p_{j}W_{d}(t_{Dn}-t_{Dj})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo: 
+\begin_inset Formula $U\,[m^{3}/kgf/cm^{2}]$
+\end_inset
+
+ = constante de influxo de água do aqüífero, dada pela equação (1.3) para
+ um aqüífero radial: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=2\pi f\phi c_{t}hr_{o}^{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo 
+\begin_inset Formula $f\,[rad]=\frac{\theta}{2\Pi}$
+\end_inset
+
+, onde 
+\begin_inset Formula $θ$
+\end_inset
+
+ é o ângulo que representa o contato reservatório/aqüífero em radianos,
+ 
+\begin_inset Formula $\phi\,[adimensional]$
+\end_inset
+
+ é a porosidade do aqüífero, 
+\begin_inset Formula $c_{t}\,[cm^{2}/kgf]$
+\end_inset
+
+ é a compressibilidade total do aqüífero, 
+\begin_inset Formula $h\,[m]$
+\end_inset
+
+ é a espessura média e 
+\begin_inset Formula $r_{o}\,[m]$
+\end_inset
+
+ é o raio do reservatório.
+ 
+\end_layout
+
+\begin_layout Standard
+Para um aqüífero linear, a constante é dada pela equação (1.4):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+U=wLh\phi c_{t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo 
+\begin_inset Formula $w\,[m]$
+\end_inset
+
+ a largura do aquífero e 
+\begin_inset Formula $L\,[m]$
+\end_inset
+
+ a largura do mesmo.
+ A variável 
+\begin_inset Formula $t_{d}$
+\end_inset
+
+ é o tempo adimensional, dado pela equação (1.5): 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+t_{d}=\frac{kt}{\phi\mu c_{t}r_{o}^{2}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo 
+\begin_inset Formula $k\,[md]$
+\end_inset
+
+ a permeabilidade do aqüífero, e 
+\begin_inset Formula $µ\,[cp]$
+\end_inset
+
+ a viscosidade da água.
+ Na equação (1.2), 
+\begin_inset Formula $\Delta p_{j}\,[kgf/cm^{2}]$
+\end_inset
+
+ representa a queda de pressão no contato no tempo 
+\begin_inset Formula $t_{j}\,[ano]$
+\end_inset
+
+, e 
+\begin_inset Formula $W_{d}(t_{Dn}-t_{Dj})$
+\end_inset
+
+ é influxo de água acumulado adimensional, obtido para o tempo adimensional
+ 
+\begin_inset Formula $(t_{Dn}-t_{Dj})$
+\end_inset
+
+, durante o qual o efeito de queda de pressão é sentido.
+ 
+\end_layout
+
+\begin_layout Standard
+Na dedução desta equação, utiliza-se o conceito de transformada de Laplace
+ para resolver a equação da difusividade do sistema aqüífero-reservatório.
+ Como as soluções são obtidas analiticamente apenas no campo de Laplace,
+ é necessário um algoritmo de inversão numérica para se obter o comportamento
+ de 
+\begin_inset Formula $W_{d}$
+\end_inset
+
+ em função de 
+\begin_inset Formula $t_{d}$
+\end_inset
+
+ .
+ Um algoritmo normalmente utilizado para tal inversão é o algoritmo de Stehfest
+ (1970).
+ A seguir soluções para aquífero radial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{W_{d}}(u)=\frac{k_{1}(\sqrt{u})}{u^{3/2}k_{0}(\sqrt{u})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime transiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{W_{d}}(u)=\frac{I_{0}(r_{eD}\sqrt{u})k_{1}(\sqrt{u})+I_{1}(\sqrt{u})k_{0}(r_{eD}\sqrt{u})}{u^{3/2}[I_{0}(r_{eD}\sqrt{u})k_{0}(\sqrt{u})-I_{0}(\sqrt{u})k_{0}(r_{eD}\sqrt{u})]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime permanente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{W_{d}}(u)=\frac{I_{1}(r_{eD}\sqrt{u})k_{1}(\sqrt{u})-I_{1}(\sqrt{u})k_{1}(r_{eD}\sqrt{u})}{u^{3/2}[I_{0}(\sqrt{u})k_{1}(r_{eD}\sqrt{u})+I_{1}(r_{eD}\sqrt{u})k_{0}(\sqrt{u})]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime pseudopermanente
+\end_layout
+
+\begin_layout Standard
+Para aquífero linear temos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{d}(t_{d})=2\sqrt{\frac{t_{d}}{\pi}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime transiente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{W_{d}}(u)=\frac{1+e^{-2\sqrt{u}}}{u^{3/2}[1-e^{-2\sqrt{u}}]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime permanente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\bar{W_{d}}(u)=\frac{1-e^{-2\sqrt{u}}}{u^{3/2}[1+e^{-2\sqrt{u}}]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Regime pseudopermanente
+\end_layout
+
+\begin_layout Standard
+No caso da solução para um aqüífero linear em regime permanente, existe
+ uma solução analítica com 
+\begin_inset Formula $W_{d}$
+\end_inset
+
+ em função de 
+\begin_inset Formula $t_{d}$
+\end_inset
+
+.
+ Para os outros casos é necessário utilizar o algoritmo de Stehfest.
+ As soluções da Tabela 1.1 são escritas em termos das funções de Bessel modificad
+as de primeira espécie, 
+\begin_inset Formula $I_{0}$
+\end_inset
+
+ e 
+\begin_inset Formula $I_{1}$
+\end_inset
+
+, e de segunda espécie, 
+\begin_inset Formula $K_{0}$
+\end_inset
+
+ e 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+, de ordens zero e um, respectivamente, e
+\begin_inset Formula $u$
+\end_inset
+
+ é a variável de Laplace.
+ Na literatura é muito comum a apresentação dos valores de 
+\begin_inset Formula $W_{d}$
+\end_inset
+
+ em função de 
+\begin_inset Formula $t_{d}$
+\end_inset
+
+ em forma de tabelas, para que não seja necessário o uso do algoritmo.
+ A previsão do comportamento de reservatórios de óleo ou gás com mecanismo
+ de influxo de água depende de duas equações básicas: a equação de influxo
+ de água (1.2) e a equação de balanço de materiais.
+ Estas podem ser resolvidas simultaneamente, por um processo iterativo,
+ para gerar a pressão no reservatório.
+ Para um reservatório de gás, a equação do balanço de materiais se resume
+ a equação (1.6) : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{p}{z}=\frac{p_{i}}{z_{i}}\frac{(1-\frac{G_{p}}{G})}{(1-\frac{W_{e}}{GB_{gi}})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde 
+\begin_inset Formula $p\,[kgf/cm^{2}]$
+\end_inset
+
+ é a pressão no instante desejado, 
+\begin_inset Formula $p_{i}\,[kgf/cm^{2}]$
+\end_inset
+
+ é a pressão inicial, 
+\begin_inset Formula $Z\,[adimensional]$
+\end_inset
+
+ é o fator de compressibilidade calculado a partir da pressão pseudocrítica,
+\begin_inset Formula $G_{p}\,[m^{3}]$
+\end_inset
+
+ é o volume de gás produzido acumulado, 
+\begin_inset Formula $G\,[m^{3}]$
+\end_inset
+
+ é o volume de gás inicial no reservatório, e 
+\begin_inset Formula $B_{gi}\,[m^{3}/m^{3}std]$
+\end_inset
+
+ é o fator volume-formação do gás.
+ Para um reservatório de óleo subsaturado, a equação do balanço de materiais
+ é dada pela equação (1.7):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{e}=N_{p}B_{o}-NB_{oi}c_{eo}\Delta p
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde 
+\begin_inset Formula $N_{p}\,[m^{3}]$
+\end_inset
+
+ é o volume de óleo recuperado acumulado,
+\begin_inset Formula $N\,[m^{3}]$
+\end_inset
+
+ é o volume de óleo inicial no reservatório, 
+\begin_inset Formula $B_{o}\,[m^{3}/m^{3}std]$
+\end_inset
+
+ é o fator volume-formação do óleo, 
+\begin_inset Formula $\Delta p\,[kgf/cm^{2}]$
+\end_inset
+
+ é a queda de pressão no contato aqüífero/reservatório, e 
+\begin_inset Formula $c_{eo}\,[cm^{2}/kgf]$
+\end_inset
+
+ é a compressibilidade efetiva do óleo dada pela equação (1.8):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+c_{eo}=\frac{c_{o}S_{o}+c_{w}S_{w}+c_{f}}{1-S_{w}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo 
+\begin_inset Formula $c_{o}\,[cm^{2}/kgf],\,c_{w}\,[cm^{2}/kgf],\,c_{f}\,[cm^{2}/kgf]$
+\end_inset
+
+ as compressibilidades do óleo, da água e da formação respectivamente, e
+ 
+\begin_inset Formula $S_{o}\,[adimensional]$
+\end_inset
+
+ e 
+\begin_inset Formula $S_{w}\,[adimensional]$
+\end_inset
+
+ as saturações do óleo e da água respectivamente.
+ Reescrevendo a equação (1.2) na forma da equação (1.6), temos a equação (1.9):
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{en}=U\sum_{j=0}^{n-2}\Delta p_{j}W_{d}(t_{Dn}-t_{Dj})+\frac{U}{2}(p_{n-2}-p_{n})W_{d}(t_{Dn}-t_{Dn-1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pode-se resolver os conjuntos de equações (1.4) e (1.6) ou (1.5) e (1.6) através
+ de um método iterativo, visto que nestas equações as únicas variáveis desconhec
+idas são 
+\begin_inset Formula $W_{en}$
+\end_inset
+
+ e 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Subsection
+Formulação Matemática - Reservatórios com Capa de Gás e Gás em Solução
+\end_layout
+
+\begin_layout Standard
+Primeiramente, devemos definir as variáveis:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{o}\,[adimensional]$
+\end_inset
+
+ - Saturação de Óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $S_{wi}\,[adimensional]$
+\end_inset
+
+ - Saturação de Água Irredutível
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $C$
+\end_inset
+
+ - Razão de Ciclagem de Gás
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R\,[m^{3}std/m^{3}std]$
+\end_inset
+
+ - Razão Gás-Óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $m\,[adimensional]$
+\end_inset
+
+ - Razão entre os volumes da capa de gás e da zona de óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{o}\,[cp]$
+\end_inset
+
+ - Permeabilidade do Óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu_{g}\,[cp]$
+\end_inset
+
+ - Permeabilidade do Gás
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p\,[kgf/cm^{2}]$
+\end_inset
+
+ - Pressão
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{g}\,[md]$
+\end_inset
+
+- Permeabilidade Efetiva ao Gás
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $k_{o}\,[md]$
+\end_inset
+
+- Permeabilidade Efetiva ao Óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{g}\,[m^{3}/m^{3}std]$
+\end_inset
+
+ - Fator Volume-Formação do Gás
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $B_{o}\,[m^{3}/m^{3}std]$
+\end_inset
+
+- Fator Volume-Formação do Óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $R_{s}\,[m^{3}std/m^{3}std]$
+\end_inset
+
+- Razão de Solubilidade
+\end_layout
+
+\begin_layout Standard
+O pontapé para a análise do comportamento do reservatório é feito através
+ do cálculo da saturação de óleo através da equação de Muskat (1949): 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\cfrac{dS_{o}}{dp}=\cfrac{S_{o}\lambda+(1-S_{o}-S_{wi})\xi+S_{o}\eta(\Psi-\frac{CR}{\alpha})+m(1-S_{wi})\xi}{1+(\frac{\mu_{o}}{\mu_{g}})(\Psi-\frac{CR}{\alpha})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\eta=\frac{1}{Bo}(\frac{\mu_{o}}{\mu_{g}})(\frac{dB_{o}}{dp})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\alpha=(\frac{B_{o}}{B_{g}})(\frac{\mu_{o}}{\mu_{g}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lambda=\frac{B_{g}}{B_{o}}\frac{dR_{s}}{dp}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Psi=\frac{k_{g}}{k_{o}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\xi=B_{g}\frac{d}{dp}(\frac{1}{B_{g}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+R=(\frac{k_{g}}{k_{o}})(\frac{B_{o}}{B_{g}})(\frac{\mu_{o}}{\mu_{g}})+R_{s}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação (1.10) é uma EDO de 1ª ordem, do tipo: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y\equiv\frac{dy}{dx}=f(x,y)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A solução da equação (1.10) não pode ser resolvida analíticamente, devendo
+ ser resolvida por um método numérico.
+ Neste software será utilizado o método de Runge-Kutta de 4ª ordem por ser
+ um método explícito, estável e mais preciso.
+ A equação de Runge-Kutta que permite esse cálculo pode ser definida por:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{j+1}=y_{j}+\frac{1}{6}(k_{1}+k_{2}+k_{3}+k_{4})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{1}=\Delta x_{j+1}f(x_{j},y_{j})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{2}=\Delta x_{j+1}f(x_{j}+\frac{\Delta x_{j+1}}{2},y_{j}+\frac{k_{1}}{2})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{3}=\Delta x_{j+1}f(x_{j}+\frac{\Delta x_{j+1}}{2},y_{j}+\frac{k_{2}}{2})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{4}=\Delta x_{j+1}f(x_{j}+\Delta x_{j+1},y_{j}+k_{3})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\Delta x_{j+1}=x_{j+1}-x_{j}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A saturação de óleo inicial 
+\begin_inset Formula $S_{oi}\,[adimensional]$
+\end_inset
+
+, a produção acumulada de óleo 
+\begin_inset Formula $N_{p}\,[m^{3}]$
+\end_inset
+
+ e a produção acumulada de gás 
+\begin_inset Formula $G_{p}\,[m^{3}]$
+\end_inset
+
+ podem ser calculadas segundo as equações:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+S_{oi}=(1-\frac{N_{p}}{N})(\frac{B_{o}}{B_{oi}})(1-S_{wi})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{p}=N[1-\frac{S_{o}}{(1-S_{wi})}(\frac{B_{oi}}{B_{o}})]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{p}=N[(\frac{B_{o}}{B_{g}}-R_{s})(1-\frac{N_{p}}{N})-(\frac{B_{oi}}{B_{g}}-R_{si})]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para Reservatórios com Gás em Solução, o método de Muskat também pode ser
+ utilizado bastando para isso substituir m=0 na Eq.
+ (1.10).
+ Assim temos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\cfrac{dS_{o}}{dp}=\cfrac{S_{o}\lambda+(1-S_{o}-S_{wi})\xi+S_{o}\eta(\Psi-\frac{CR}{\alpha})}{1+(\frac{\mu_{o}}{\mu_{g}})(\Psi-\frac{CR}{\alpha})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sendo o restante exatamente igual como foi descrito acima.
+ 
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes – assuntos
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Identificação-de-pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Os seguintes pacotes foram identificados:
+\end_layout
+
+\begin_layout Itemize
+Reservatório: Esse pacote recebe os dados do usuário ou lê do disco (há
+ métodos para obtenção para ambos os métodos), os dados se separam, de acordo
+ com a sua natureza: rocha, fluído, aquífero, dados de produção.
+ Quando juntas fornecem uma caracterização do reservatório como um todo.
+ Além disso, esse banco de dados serve como base para os cálculos da simulação.
+ 
+\end_layout
+
+\begin_layout Itemize
+Simulador de Mecanismos de Produção - SMP : Aqui se encontram os modelos
+ pelos quais a previsão dos parâmetros comportamentais é feita, isto é,
+ as classes que descrevem o método de Muskat, método de Fetkovitch e método
+ de Van Everdingen & Hurst, tais classes estão separadas nas componentes
+ para os reservatórios que esses modelos são apropriados.
+ 
+\end_layout
+
+\begin_layout Itemize
+Modelagem Numérica Computacional: Contém os algoritmos matemáticos necessários
+ para a solução dos modelos do SMP.
+ Este pacote contém os algoritmos: Transformada de Laplace, Algoritmo de
+ Inversão Numérica de Stehfest e Método de Runge-Kutta de 4ª ordem.
+ Este pacote está separado do SMP, pois um dos objetivos da AOO é ter uma
+ maior reusabilidade do código, assim, estando separados, é possível aplicar
+ este mesmo pacote para outros problemas de engenharia, como por exemplo
+ o de análise de teste de pressão.
+ 
+\end_layout
+
+\begin_layout Itemize
+Gráfico: Aqui se encontra a biblioteca do gnuplot, necessária para a geração
+ dos gráficos dos parâmetros do reservatório para uma melhor análise, é
+ sabido que existe uma demanda por programa que gere gráficos, assim portanto,
+ este software implementará a saída gráfica dos dados calculados.
+ 
+\end_layout
+
+\begin_layout Itemize
+Biblioteca: Dentre as bibliotecas utilizadas, estarão as bibliotecas padrão
+ de C++ (STL) e bibliotecas como a iostream, iomanip, etc.
+ e a biblioteca GSL que fornecerá a base para as componentes do NCP.
+ 
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+O diagrama de pacotes da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+ mostra as relações existentes entre os pacotes deste software.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ../imagens/Pacotesx.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de pacotes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

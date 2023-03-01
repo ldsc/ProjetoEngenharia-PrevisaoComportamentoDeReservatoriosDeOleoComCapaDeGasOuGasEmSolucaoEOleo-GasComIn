@@ -1,0 +1,20 @@
+This is LuaTeX, Version 1.0.4 (MiKTeX 2.9.6300)  (format=lualatex 2017.6.14)  18 JUN 2017 20:03
+ restricted system commands enabled.
+**DocumentoMestre-Trabalho-ProgramacaoPratica.tex
+
+! Emergency stop.
+<*> DocumentoMestre-Trabalho-ProgramacaoPratica.tex
+                                                
+End of file on the terminal!
+
+
+
+Here is how much of LuaTeX's memory you used:
+ 5 strings out of 494489
+ 100000,89155 words of node,token memory allocated 234 words of node memory still in use:
+   34 glue_spec nodes
+   avail lists: 2:12,3:1,4:1,5:1
+ 4246 multiletter control sequences out of 65536+200000
+ 14 fonts using 418323 bytes
+ 0i,0n,0p,0b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

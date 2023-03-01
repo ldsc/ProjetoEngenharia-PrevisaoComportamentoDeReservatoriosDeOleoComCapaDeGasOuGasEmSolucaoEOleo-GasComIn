@@ -1,0 +1,31 @@
+1
+1
+	----------
+	Propriedades do Reservatorio
+	----------
+Pressao Inicial (kgf/cm2): 140.6
+Porosidade(fracao): 0.2
+Espessura Media (m): 30.5
+Raio (m): 3048
+Saturacao da Agua (fracao): 0.2
+Vazao (m3 std/d): 2.55809e+006
+	----------
+Propriedades do Gas
+	----------
+Densidade: 0.7
+Volume inicial (m3 std): 2.19739e+010
+Fator Volume-Formacao (m3/m3 std): 0.0064826
+Temperatura Pseudo-Critica Tpc (K):217.4
+Pressao  Pseudo-Critica Ppc (kgf/cm2):47
+Fator de Compressibilidade z:0.9233
+Temperatura (K): 327.55
+	----------
+	Propriedades do Aquifero
+	----------
+Pressao Inicial (kgf/cm2): 140.6
+Porosidade(fracao): 0.2
+Espessura Media (m): 30.5
+Raio (m): 30480
+Permeabilidade (md): 100
+Compressibilidade Total (cm2/kgf): 8.53e-005
+Viscosidade da Agua (cp): 0.5
